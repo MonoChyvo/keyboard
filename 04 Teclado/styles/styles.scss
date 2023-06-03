@@ -1,0 +1,242 @@
+body {
+  background-color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  color: rgb(82, 175, 129);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px black;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  height: 3em;
+  width: 3em;
+  color: rgb(0, 0, 0);
+  border-radius: 0.4em;
+  line-height: 3em;
+  letter-spacing: 1px;
+  margin: 0.4em;
+  transition: .6s;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#tab {
+  width: 5em;
+}
+
+#caps {
+  width: 6em;
+}
+
+#left-shift {
+  width: 8em;
+}
+
+#enter {
+  width: 6em;
+}
+
+#right-shift {
+  width: 8em;
+}
+
+#back {
+  width: 5em;
+}
+
+.pinky {
+  background-color: crimson;
+  border: 2px solid hsl(348, 83%, 47%);
+  box-shadow: 0 6px 6px black,
+    0 0 1px 3px hsl(348, 98%, 31%),
+    inset 2px 2px 2px hsl(348, 100%, 18%),
+    inset 0 0 1px hsl(348, 100%, 18%);
+}
+
+.pinky.selected {
+  color: crimson;
+  text-shadow: 1px 1px 2px black;
+}
+
+.ring {
+  background-color: coral;
+  border: 2px solid hsl(16, 100%, 66%);
+  box-shadow: 0 6px 6px black,
+      0 0 1px 3px rgb(250, 101, 47),
+      inset 2px 2px 2px rgb(117, 44, 17),
+      inset 0 0 1px rgb(117, 44, 17);
+}
+
+.ring.selected {
+  color: coral;
+  text-shadow: 1px 1px 2px black;
+}
+
+.middle {
+  background-color: darkorange;
+  border: 2px solid darkorange;
+  box-shadow: 0 6px 6px black,
+      0 0 1px 3px rgb(194, 107, 0),
+      inset 2px 2px 2px rgb(122, 67, 0),
+      inset 0 0 1px rgb(122, 67, 0);
+}
+
+.middle.selected {
+  color: darkorange;
+  text-shadow: 1px 1px 2px black;
+}
+
+.pointer1st {
+  background-color: gold;
+  border: 2px solid gold;
+  box-shadow: 0 6px 6px black,
+      0 0 1px 3px rgb(191, 163, 0),
+      inset 2px 2px 2px rgb(129, 110, 0),
+      inset 0 0 1px rgb(129, 110, 0);
+}
+
+.pointer1st.selected {
+  color: gold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.pointer2nd {
+  background-color: khaki;
+  border: 2px solid khaki;
+  box-shadow: 0 6px 6px black,
+      0 0 1px 3px rgb(168, 159, 84),
+      inset 2px 2px 2px rgb(111, 105, 50),
+      inset 0 0 1px rgb(111, 105, 50);
+}
+
+.pointer2nd.selected {
+  color: khaki;
+  text-shadow: 1px 1px 2px black;
+}
+
+.fill-out-key {
+  background-color: slategrey;
+  border: 2px solid slategrey;
+}
+
+.selected {
+  background-color: transparent;
+  -webkit-animation: vibrate-1 .4s linear infinite both;
+  animation: vibrate-1 .4s linear infinite both;
+}
+
+
+.hit {
+  -webkit-animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes hit {
+  0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes hit {
+  0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
